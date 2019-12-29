@@ -1,6 +1,6 @@
 [submodule "src/ledger"]
 	path = src/ledger
-	url = https://github.com/cosmos/ledger-cosmos-app
+	url = https://github.com/zondax/ledger-xar-app
 [submodule "deps/nanos-secure-sdk"]
 	path = deps/nanos-secure-sdk
 	url = https://github.com/LedgerHQ/nanos-secure-sdk.git
