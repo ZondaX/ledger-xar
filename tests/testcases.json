@@ -790,5 +790,179 @@
       "53 | Validator [1/2] : cosmosvaloper1hjct6q7npsspsg3dgvzk3sdf8",
       "53 | Validator [2/2] : 9spmlpfdn6m9d"
     ]
+  },
+  {
+    "name": "XAR_DepositCollateral",
+    "tx": {
+      "account_number": "0",
+      "chain_id": "test-chain-1",
+      "fee": {
+        "amount": [
+          {
+            "amount": "5",
+            "denom": "photon"
+          }
+        ],
+        "gas": "10000"
+      },
+      "memo": "some memo",
+      "msgs": [
+        {
+          "type": "csdt/MsgDepositCollateral",
+          "value": {
+            "sender": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "collateral_denom": "denomtest",
+            "collateral_change": "12345"
+          }
+        }
+      ],
+      "sequence": "1"
+    },
+    "parsingErr": "No error",
+    "validationErr": "No error",
+    "expected": [
+      "0 | Chain ID : test-chain-1",
+      "1 | Account : 0",
+      "2 | Sequence : 1",
+      "3 | Fee : 5 photon",
+      "4 | Gas : 10000",
+      "5 | Memo : some memo",
+      "6 | Type : Deposit Collateral",
+      "7 | Change : 12345",
+      "8 | Coll Denom : denomtest",
+      "9 | Sender [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "9 | Sender [2/2] : 3vwtpl"
+    ]
+  },
+  {
+    "name": "XAR_MsgWithdrawCollateral",
+    "tx": {
+      "account_number": "0",
+      "chain_id": "test-chain-X",
+      "fee": {
+        "amount": [
+          {
+            "amount": "3",
+            "denom": "apples"
+          }
+        ],
+        "gas": "14000"
+      },
+      "memo": "some memo",
+      "msgs": [
+        {
+          "type": "csdt/MsgWithdrawCollateral",
+          "value": {
+            "sender": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "collateral_denom": "peanuts",
+            "collateral_change": "7894"
+          }
+        }
+      ],
+      "sequence": "1"
+    },
+    "parsingErr": "No error",
+    "validationErr": "No error",
+    "expected": [
+      "0 | Chain ID : test-chain-X",
+      "1 | Account : 0",
+      "2 | Sequence : 1",
+      "3 | Fee : 3 apples",
+      "4 | Gas : 14000",
+      "5 | Memo : some memo",
+      "6 | Type : Withdraw Collateral",
+      "7 | Change : 7894",
+      "8 | Coll Denom : peanuts",
+      "9 | Sender [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "9 | Sender [2/2] : 3vwtpl"
+    ]
+  },
+  {
+    "name": "XAR_MsgSettleDebt",
+    "tx": {
+      "account_number": "0",
+      "chain_id": "test-chain-1",
+      "fee": {
+        "amount": [
+          {
+            "amount": "5",
+            "denom": "photon"
+          }
+        ],
+        "gas": "10000"
+      },
+      "memo": "some memo",
+      "msgs": [
+        {
+          "type": "csdt/MsgSettleDebt",
+          "value": {
+            "sender": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "collateral_denom": "oranges",
+            "debt_denom": "almonds",
+            "debt_change": "44124"
+          }
+        }
+      ],
+      "sequence": "1"
+    },
+    "parsingErr": "No error",
+    "validationErr": "No error",
+    "expected": [
+      "0 | Chain ID : test-chain-1",
+      "1 | Account : 0",
+      "2 | Sequence : 1",
+      "3 | Fee : 5 photon",
+      "4 | Gas : 10000",
+      "5 | Memo : some memo",
+      "6 | Type : Settle Debt",
+      "7 | Coll Denom : oranges",
+      "8 | Debt Change : 44124",
+      "9 | Debt Denom : almonds",
+      "10 | Sender [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "10 | Sender [2/2] : 3vwtpl"
+    ]
+  },
+  {
+    "name": "XAR_MsgWithdrawDebt",
+    "tx": {
+      "account_number": "0",
+      "chain_id": "test-chain-1",
+      "fee": {
+        "amount": [
+          {
+            "amount": "5",
+            "denom": "photon"
+          }
+        ],
+        "gas": "10000"
+      },
+      "memo": "some memo",
+      "msgs": [
+        {
+          "type": "csdt/MsgWithdrawDebt",
+          "value": {
+            "sender": "cosmos102hty0jv2s29lyc4u0tv97z9v298e24t3vwtpl",
+            "collateral_denom": "pineapples",
+            "collateral_change": "12345"
+          }
+        }
+      ],
+      "sequence": "1"
+    },
+    "parsingErr": "No error",
+    "validationErr": "No error",
+    "expected": [
+      "0 | Chain ID : test-chain-1",
+      "1 | Account : 0",
+      "2 | Sequence : 1",
+      "3 | Fee : 5 photon",
+      "4 | Gas : 10000",
+      "5 | Memo : some memo",
+      "6 | Type : Withdraw Debt",
+      "7 | Change : 12345",
+      "8 | Coll Denom : pineapples",
+      "9 | Sender [1/2] : cosmos102hty0jv2s29lyc4u0tv97z9v298e24t",
+      "9 | Sender [2/2] : 3vwtpl"
+    ]
   }
 ]
